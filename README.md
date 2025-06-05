@@ -1,12 +1,28 @@
-# React + Vite
+# React OTP Input Component
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A customizable React component for seamless and user-friendly OTP (One-Time Password) input. Ideal for authentication flows requiring multi-digit numeric codes.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- Render a configurable number of input boxes (default: 6) for OTP digits.
+- Accept only a single numeric character per input.
+- Automatically shift focus to the next input when a digit is entered.
+- On backspace, if the current input is empty, move focus to the previous input and clear its value.
+- Automatically focus the first input on component mount.
+- Support pasting the entire OTP to fill inputs correctly.
+- Navigate between inputs using left and right arrow keys.
+- Trigger a callback on OTP completion with the full code.
+- Basic numeric validation and error feedback.
+- Accessible with keyboard and screen readers.
 
-## Expanding the ESLint configuration
+Accessibility
+Each input has an ARIA label indicating its position.
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+Keyboard navigation using arrow keys.
+
+Focus management for smooth input experience.
+
+License
+MIT
+
+Feel free to customize the styles and validation logic to fit your needs!
